@@ -24,7 +24,7 @@
 			document.body.appendChild( renderer.domElement )
 
 			var boxgeometry = new THREE.BoxGeometry( 1, 1, 1 ),
-				spheregeometry = new THREE.SphereGeometry( 5, 32, 32 ),
+				spheregeometry = new THREE.SphereGeometry( 1, 10, 10 ),
 				cubematerial = new THREE.MeshBasicMaterial( { color: 0xF01000 } ),
 				spherematerial = new THREE.MeshBasicMaterial( {color: 0xFFFFFF} ),
 				cube = new THREE.Mesh( boxgeometry, cubematerial ),
@@ -37,12 +37,12 @@
 			camera.position.z = 5
 
 			var render = function(){
-				
+
 				requestAnimationFrame( render )
 				//cube.rotation.x += 0.1
 				//cube.rotation.y += 0.1
-				sphere.rotation.x += 0.5
-				sphere.rotation.x += 0.5
+				sphere.rotation.x += 0.2
+				sphere.rotation.y += 0.1
 
 				renderer.render( scene, camera ) 
 			}
